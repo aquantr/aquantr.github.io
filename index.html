@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Your Name | Software Developer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(900px, 90%);
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 0;
+    }
+
+    nav .name {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    nav .links a:hover {
+      color: white;
+    }
+
+    .hero {
+      padding: 110px 0 120px;
+      max-width: 760px;
+    }
+
+    .hero .eyebrow {
+      color: #999;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #aaa;
+      max-width: 650px;
+    }
+
+    .hero-buttons {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      border: 1px solid #333;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: white;
+      color: black;
+      border-color: white;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: #777;
+    }
+
+    section {
+      padding: 80px 0;
+      border-top: 1px solid #222;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
+    }
+
+    .about {
+      max-width: 700px;
+      font-size: 18px;
+      color: #aaa;
+    }
+
+    .project {
+      padding: 32px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .project:first-of-type {
+      border-top: 1px solid #222;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .project h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .project p {
+      color: #999;
+      max-width: 650px;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #181818;
+      border: 1px solid #2a2a2a;
+      color: #aaa;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .project-link {
+      color: #aaa;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .project-link:hover {
+      color: white;
+    }
+
+    .experience-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
+      padding: 30px 0;
+      border-top: 1px solid #222;
+    }
+
+    .experience-date {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .experience-item h3 {
+      margin-bottom: 4px;
+    }
+
+    .experience-item .company {
+      color: #aaa;
+      margin-bottom: 14px;
+    }
+
+    .experience-item p {
+      color: #999;
+    }
+
+    .contact {
+      max-width: 650px;
+    }
+
+    .contact p {
+      color: #aaa;
+      margin-bottom: 28px;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid #222;
+      color: #666;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      nav .links {
+        display: none;
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .project-header {
+        flex-direction: column;
+      }
+
+      .experience-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav>
+      <div class="name">Your Name</div>
+
+      <div class="links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">LinkedIn</a>
+      </div>
+    </nav>
+
+
+    <main>
+
+      <section class="hero" style="border: none;">
+        <div class="eyebrow">Software Developer</div>
+
+        <h1>
+          I build backend systems
+          and developer infrastructure.
+        </h1>
+
+        <p>
+          Software developer focused on Java, Spring Boot, distributed
+          systems and cloud technologies. I enjoy building reliable backend
+          services and learning how systems work under the hood.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button primary" href="#projects">
+            View Projects
+          </a>
+
+          <a
+            class="button"
+            href="https://github.com/YOUR_USERNAME"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="button"
+            href="resume.pdf"
+            target="_blank"
+          >
+            Resume
+          </a>
+        </div>
+      </section>
+
+
+      <section id="about">
+        <h2>About</h2>
+
+        <p class="about">
+          I'm a software developer interested in backend engineering,
+          distributed systems and cloud infrastructure. My current work
+          primarily involves Java, while my personal projects explore
+          system design, messaging systems and production-style APIs.
+        </p>
+      </section>
+
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+
+
+        <div class="project">
+
+          <div class="project-header">
+
+            <div>
+              <h3>CloudOps Incident Triage API</h3>
+
+              <p>
+                Production-style REST API for managing operational incidents,
+                statuses and incident notes. Built with database migrations,
+                containerized PostgreSQL, automated testing and CI.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Java 21</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Flyway</span>
+                <span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://github.com/YOUR_USERNAME/cloudops-incident-triage-api"
+              target="_blank"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-header">
+
+            <div>
+              <h3>Build Your Own Kafka</h3>
+
+              <p>
+                A simplified distributed messaging system built to explore
+                Kafka-style architecture including brokers, topics,
+                partitions, persistent logs, replication and consumer offsets.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">ZooKeeper</span>
+                <span class="tag">TCP</span>
+                <span class="tag">Distributed Systems</span>
+                <span class="tag">Storage</span>
+              </div>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://github.com/YOUR_USERNAME/build-your-own-kafka"
+              target="_blank"
+            >
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-header">
+
+            <div>
+              <h3>Next Project</h3>
+
+              <p>
+                Currently exploring backend and systems programming projects
+                using Go.
+              </p>
+
+              <div class="tags">
+                <span class="tag">Go</span>
+                <span class="tag">Backend</span>
+                <span class="tag">Systems</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section id="experience">
+
+        <h2>Experience</h2>
+
+        <div class="experience-item">
+
+          <div class="experience-date">
+            2025 — Present
+          </div>
+
+          <div>
+            <h3>Software Developer</h3>
+
+            <div class="company">
+              Intact Financial Corporation
+            </div>
+
+            <p>
+              Building and maintaining software systems in a large-scale
+              enterprise environment, collaborating with developers,
+              analysts and other engineering teams.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section id="contact">
+
+        <h2>Let's Talk</h2>
+
+        <div class="contact">
+
+          <p>
+            I'm interested in backend, platform and cloud software
+            engineering opportunities.
+          </p>
+
+          <a
+            class="button primary"
+            href="mailto:YOUR_EMAIL"
+          >
+            Email Me
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer>
+      © 2026 Your Name
+    </footer>
+
+  </div>
+
+</body>
+</html>
